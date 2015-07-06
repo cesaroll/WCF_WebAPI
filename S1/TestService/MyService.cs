@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 
 namespace TestService
 {
@@ -63,6 +64,39 @@ namespace TestService
             }
 
             return topper;
+        }
+
+        public List<Country> GetAllCountries()
+        {
+            List<Country> countries = new List<Country>();
+
+            string conStr = "Server=WIN81VM;Database=WCF;User Id=sa;Password=GUesst01;";
+
+            using (SqlConnection con = new SqlConnection(conStr))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Country", con);
+
+                con.Open();
+
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                Country c;
+                while (dr.Read())
+                {
+                    c = new Country()
+                    {
+                        CuntryId = int.Parse(dr[0].ToString()),
+                        CountryName = dr[1].ToString()
+                    };
+
+                    countries.Add(c);
+                }
+
+                dr.Close();
+                con.Close();
+            }
+
+            return countries;
         }
     }
 }

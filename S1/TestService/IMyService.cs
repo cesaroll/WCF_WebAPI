@@ -23,5 +23,8 @@ namespace TestService
 
         [OperationContract]
         Student GetTopper(ICollection<Student> Students );
+
+        [OperationContract]
+        List<Country> GetAllCountries();
     }
 }
