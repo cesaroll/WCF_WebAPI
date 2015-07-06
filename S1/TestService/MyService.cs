@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TestService
 {
@@ -14,10 +15,10 @@ namespace TestService
             return "Hello Mr./Ms " + Name;
         }
 
-        public string GetResult(int sid, string sName, int M1, int M2, int M3)
+        public string GetResult(Student s)
         {
             //Calculate average
-            double avg = (M1 + M2 + M3)/3.0;
+            double avg = (s.M1 + s.M2 + s.M3)/3.0;
 
             if (avg < 35)
                 return "Fail";
@@ -43,6 +44,25 @@ namespace TestService
         {
             Array.Sort(ar);
             return ar;
+        }
+
+        public Student GetTopper(ICollection<Student> Students)
+        {
+            double maxAvg = 0;
+            Student topper = null;
+
+            foreach (Student s in Students)
+            {
+                double avg = (s.M1 + s.M2 + s.M3) / 3.0;
+
+                if (avg > maxAvg)
+                {
+                    maxAvg = avg;
+                    topper = s;
+                }
+            }
+
+            return topper;
         }
     }
 }
