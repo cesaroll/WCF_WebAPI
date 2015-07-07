@@ -2,3 +2,4 @@ bin/
 obj/
 *.tss
 *.suo
+*.csproj.user
