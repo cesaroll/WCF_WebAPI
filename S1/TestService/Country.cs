@@ -10,7 +10,7 @@ namespace TestService
     public class Country
     {
         [DataMember]
-        public int CuntryId { get; set; }
+        public int CountryId { get; set; }
 
         [DataMember]
         public string CountryName { get; set; }

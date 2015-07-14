@@ -85,7 +85,7 @@ namespace TestService
                 {
                     c = new Country()
                     {
-                        CuntryId = int.Parse(dr[0].ToString()),
+                        CountryId = int.Parse(dr[0].ToString()),
                         CountryName = dr[1].ToString()
                     };
 
