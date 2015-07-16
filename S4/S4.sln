@@ -7,6 +7,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiSvcLib", "MultiSvcLib\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiSvcHost", "MultiSvcHost\MultiSvcHost.csproj", "{BF756A54-2230-454C-A578-8A1717F9F9DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppClient", "WebAppClient\WebAppClient.csproj", "{BCAB64A5-8BF1-4F46-99A6-E7DB5958E6B2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{BF756A54-2230-454C-A578-8A1717F9F9DB} = {BF756A54-2230-454C-A578-8A1717F9F9DB}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{BF756A54-2230-454C-A578-8A1717F9F9DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF756A54-2230-454C-A578-8A1717F9F9DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF756A54-2230-454C-A578-8A1717F9F9DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCAB64A5-8BF1-4F46-99A6-E7DB5958E6B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCAB64A5-8BF1-4F46-99A6-E7DB5958E6B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCAB64A5-8BF1-4F46-99A6-E7DB5958E6B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCAB64A5-8BF1-4F46-99A6-E7DB5958E6B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
